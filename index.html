@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy Birthday 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif}
+body{background:radial-gradient(circle at 50% 20%,#6f174d 0,#351027 42%,#170b19 100%);color:#fff;overflow-x:hidden}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:42px 22px;position:relative;overflow:hidden}
+.glow{position:absolute;width:340px;height:340px;border-radius:50%;background:#d84f9b;filter:blur(90px);opacity:.18;animation:float 7s ease-in-out infinite}
+.g1{top:5%;left:-120px}.g2{bottom:-100px;right:-100px;animation-delay:2s}
+.content{width:min(720px,100%);text-align:center;position:relative;z-index:2}
+.kicker{font-size:15px;letter-spacing:4px;color:#f6c8e1;margin-bottom:24px}
+h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(45px,10vw,86px);line-height:.98;margin:0}
+h1 em{color:#ff9fca}
+.subtitle{max-width:560px;margin:30px auto 0;color:#e9bfd5;line-height:1.9;font-size:15px}
+.signature{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;margin-top:32px;color:#ffd4e8}
+.btn{margin-top:35px;border:1px solid #d77ca8;background:#ffffff12;color:white;border-radius:999px;padding:14px 25px;font-size:15px;cursor:pointer;backdrop-filter:blur(10px);transition:.25s}
+.btn:hover{transform:translateY(-2px);background:#ffffff20}
+.music{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;border:1px solid #ffffff30;background:#ffffff12;color:#ffb2d4;font-size:24px;z-index:5}
+.flower{position:absolute;font-size:20px;opacity:.75;animation:drift 6s linear infinite}
+.f1{top:18%;left:12%}.f2{top:30%;right:17%;animation-delay:1s}.f3{bottom:25%;left:18%;animation-delay:3s}.f4{bottom:14%;right:20%;animation-delay:2s}
+#message{display:none}.card{margin-top:30px;padding:30px;border:1px solid #ffffff1f;background:#ffffff0b;border-radius:25px;text-align:left;line-height:1.9;color:#f4d9e6}
+.card strong{color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.gallery div{height:140px;border-radius:16px;background:#ffffff12;border:1px dashed #ffffff35;display:flex;align-items:center;justify-content:center;color:#d9a9c1;font-size:13px}
+@media(max-width:520px){.gallery{grid-template-columns:1fr 1fr}.gallery div{height:120px}}
+@keyframes float{50%{transform:translate(25px,-20px)}} @keyframes drift{0%{transform:translateY(15px) rotate(0)}50%{transform:translateY(-20px) rotate(10deg)}100%{transform:translateY(15px) rotate(0)}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="flower f1">🌸</div><div class="flower f2">🌷</div><div class="flower f3">🌸</div><div class="flower f4">🌼</div>
+<main class="content">
+<div class="kicker">🌸 WITH ALL MY HEART 🌸</div>
+<h1>May your life<br><em>always be filled</em><br>with flowers</h1>
+<p class="subtitle">Happy birthday, <strong>[NAMA]</strong>. May your days always be filled with love, happiness, and all the beautiful things you deserve. I am grateful for every single day I get to know you.</p>
+<div class="signature">— With love that never runs out 💕 —</div>
+<button class="btn" onclick="openMessage()">💌 Open your little surprise</button>
+<section id="message">
+<div class="card">
+<strong>For you, [NAMA] 🤍</strong><br><br>
+Happy birthdayyy! Aku berharap kamu selalu sehat, bahagia, dan semua hal yang kamu impikan bisa tercapai. Aku bersyukur banget bisa mengenal kamu dan punya banyak momen yang bisa diingat bersama.<br><br>
+Semoga kita tetap dekat, terus saling support, dan kalau memang kita masih sama-sama mau, semoga kita bisa terus bersama sampai tahun-tahun berikutnya—sampai kita dewasa, 10 tahun, 20 tahun, dan seterusnya. 🥹❤️<br><br>
+Terima kasih sudah menjadi seseorang yang spesial. Jangan lupa senyum hari ini, karena hari ini adalah hari kamu. Happy birthday! 🎂🌷
+</div>
+<div class="gallery">
+<div>📷 Foto kenangan 1</div><div>📷 Foto kenangan 2</div><div>📷 Foto kenangan 3</div>
+<div>📷 Foto kenangan 4</div><div>📷 Foto kenangan 5</div><div>📷 Foto kenangan 6</div>
+</div>
+</section>
+</main>
+<button class="music" onclick="toggleMusic()">♪</button>
+<audio id="music" loop></audio>
+</div>
+<script>
+function openMessage(){document.getElementById('message').style.display='block';document.getElementById('message').scrollIntoView({behavior:'smooth'})}
+function toggleMusic(){const a=document.getElementById('music'); if(!a.src){alert('Tambahkan file lagu sendiri ke website, lalu isi src audio di bagian HTML.')} else if(a.paused){a.play()}else{a.pause()}}
+</script>
+</body>
+</html>
